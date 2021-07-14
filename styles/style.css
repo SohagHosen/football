@@ -18,11 +18,13 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary);
   color: white;
+  min-width: 300px;
 }
 
 /* common styles */
 .container {
   max-width: 1160px;
+  width: 100%;
 }
 
 /* header section styles */
@@ -34,6 +36,31 @@ body {
   height: 577px;
   margin: auto;
 }
+.nav {
+  height: 100px;
+  position: relative;
+}
+.navbar {
+  padding-top: 30px;
+  margin: auto;
+  display: flex;
+}
+.navbar li {
+  list-style: none;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.navbar li:last-child {
+  margin-left: auto;
+}
+.navbar li button {
+  background-color: #e02c6d;
+  padding: 10px 24px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
 .hero_section {
   margin-top: 50px;
   display: flex;
@@ -44,7 +71,7 @@ body {
   width: 50%;
 }
 .hero_contant h1 {
-  font-size: 64px;
+  font-size: 4rem;
   width: 485px;
 }
 .hero_contant button {
@@ -91,12 +118,19 @@ body {
 
 /* game highlight section styles */
 .game_highlight {
-  margin: 150px auto;
+  margin: auto;
+  margin-top: 100px;
   display: flex;
   align-items: center;
 }
+.highlight_contant {
+  width: 50%;
+}
+.hero_img {
+  width: 50%;
+}
 .highlight_contant h1 {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700px;
 }
 .highlight_contant p {
@@ -111,6 +145,69 @@ body {
   background-color: #e02c6d;
 }
 
+/* about section styles */
+.about {
+  margin: auto;
+  display: flex;
+  margin: 100px auto;
+}
+.about_contant {
+  width: 40%;
+  margin: auto;
+}
+.about_contant h1 {
+  font-size: 3rem;
+  font-weight: 700px;
+}
+.about_contant p {
+  font-size: 1rem;
+  color: rgb(196, 196, 196);
+}
+
+/* contact section styles */
+.contact {
+  margin: auto;
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  background: var(--header);
+}
+.contact .form {
+  width: 50%;
+}
+.form input,
+textarea {
+  width: 90%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  background: transparent;
+  border: none;
+  color: white;
+  border-bottom: 1px solid gray;
+}
+.form input,
+textarea:focus {
+  outline: none;
+}
+.contact_info {
+  width: 50%;
+}
+.contact_info h4 {
+  font-size: 1.5rem;
+}
+.contact_info p {
+  margin-top: 0.5rem;
+}
+.submit_btn {
+  width: 90%;
+  padding: 0.5rem;
+  background: #e12d6d;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
 /* footer section styles */
 .footer_section {
   display: flex;
@@ -138,4 +235,238 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* media query */
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 10px;
+  }
+  .header_section {
+    height: auto;
+  }
+  .hero_section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero_contant {
+    width: 90%;
+  }
+  .hero_img {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  .hero_img img {
+    width: 90%;
+  }
+  .hero_contant h1 {
+    font-size: 4rem;
+    width: 100%;
+  }
+  .player {
+    max-width: 330px;
+  }
+  .player img {
+    width: 100%;
+  }
+
+  .players {
+    grid-template-columns: repeat(1, 100%);
+  }
+  .game_highlight {
+    flex-direction: column;
+  }
+  .highlight_contant {
+    width: 90%;
+  }
+  .highlight_img {
+    text-align: center;
+  }
+  .highlight_img img {
+    margin-top: 50px;
+    width: 90%;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about_img {
+    text-align: center;
+  }
+  .about_img img {
+    width: 90%;
+  }
+  .about_contant {
+    width: 90%;
+    margin-top: 30px;
+  }
+  .contact {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contact .form {
+    width: 100%;
+    margin: auto;
+  }
+  .contact_info {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .footer_section {
+    margin-top: 50px;
+  }
+  .footer_section img {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 1160px;
+    width: 90%;
+  }
+  .header_section {
+    height: auto;
+  }
+  .hero_section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero_contant {
+    width: 90%;
+  }
+  .hero_img {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .player {
+    max-width: 330px;
+  }
+  .player img {
+    width: 100%;
+  }
+
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .game_highlight {
+    flex-direction: column;
+  }
+  .highlight_contant {
+    width: 90%;
+  }
+  .highlight_img {
+    text-align: center;
+  }
+  .highlight_img img {
+    margin-top: 50px;
+    width: 90%;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about_img {
+    text-align: center;
+  }
+  .about_img img {
+    width: 90%;
+  }
+  .about_contant {
+    width: 90%;
+    margin-top: 30px;
+  }
+  .footer_section {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 1160px;
+    width: 90%;
+  }
+  .header_section {
+    max-width: 1440px;
+    width: 100%;
+    height: 577px;
+    margin: auto;
+    display: flex;
+  }
+  .hero_section {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .hero_contant {
+    width: 50%;
+  }
+  .hero_img {
+    margin-top: 50px;
+    width: 50%;
+    text-align: center;
+  }
+  .hero_img img {
+    width: 100%;
+  }
+  .hero_contant h1 {
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  .player {
+    max-width: 330px;
+  }
+  .player img {
+    width: 100%;
+  }
+
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer_section {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .player {
+    max-width: 330px;
+  }
+  .player img {
+    width: 100%;
+  }
+
+  .players {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+  .about_contant {
+    width: 40%;
+    margin: auto;
+  }
+  .game_highlight {
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .highlight_contant {
+    width: 50%;
+  }
+  .hero_img {
+    width: 50%;
+  }
+  .contact {
+    margin-top: 50px;
+  }
 }
