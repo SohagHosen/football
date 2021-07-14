@@ -36,31 +36,6 @@ body {
   height: 577px;
   margin: auto;
 }
-.nav {
-  height: 100px;
-  position: relative;
-}
-.navbar {
-  padding-top: 30px;
-  margin: auto;
-  display: flex;
-}
-.navbar li {
-  list-style: none;
-  margin-right: 30px;
-  cursor: pointer;
-}
-.navbar li:last-child {
-  margin-left: auto;
-}
-.navbar li button {
-  background-color: #e02c6d;
-  padding: 10px 24px;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
 .hero_section {
   margin-top: 50px;
   display: flex;
@@ -73,6 +48,19 @@ body {
 .hero_contant h1 {
   font-size: 4rem;
   width: 485px;
+  position: relative;
+  animation: textAnimation 2s;
+}
+/* text Animation */
+@keyframes textAnimation {
+  0% {
+    color: #252358;
+    margin-top: 140px;
+  }
+  50% {
+    color: #252358;
+    margin-bottom: 100px;
+  }
 }
 .hero_contant button {
   background-color: #e02c6d;
@@ -81,6 +69,18 @@ body {
   color: #fff;
   font-size: 16px;
   cursor: pointer;
+  animation: btnAnimation 2s;
+}
+/* button animation */
+@keyframes btnAnimation {
+  0% {
+    background-color: #252358;
+    margin-top: 100px;
+  }
+  50% {
+    /* color: #252358; */
+    margin-bottom: 140px;
+  }
 }
 .hero_contant .fas {
   margin-left: 8px;
@@ -238,10 +238,8 @@ textarea:focus {
 }
 
 /* media query */
+/* xsmall device responsive */
 @media only screen and (max-width: 576px) {
-  html {
-    font-size: 10px;
-  }
   .header_section {
     height: auto;
   }
@@ -265,6 +263,7 @@ textarea:focus {
     font-size: 4rem;
     width: 100%;
   }
+
   .player {
     max-width: 330px;
   }
@@ -320,6 +319,7 @@ textarea:focus {
     width: 80%;
   }
 }
+/* small deviece media quirie */
 @media only screen and (min-width: 576px) {
   .container {
     max-width: 1160px;
@@ -383,6 +383,7 @@ textarea:focus {
     margin-top: 50px;
   }
 }
+/* miduam deviece media quirie */
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 1160px;
@@ -432,6 +433,7 @@ textarea:focus {
     margin-top: 50px;
   }
 }
+/* large deviece media quirie */
 @media only screen and (min-width: 992px) {
   .player {
     max-width: 330px;
